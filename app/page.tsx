@@ -1,5 +1,6 @@
 export default function WoodleighHillsideRNOpeningPage() {
   const googleFormUrl = "https://forms.gle/6dNgvKJjEz5d9mXS9";
+  const floorplanImage = "/woodleigh-hillside-rn-floorplan.png";
   const spaces = [
     {
       title: "Main Activity Area",
@@ -9,10 +10,10 @@ export default function WoodleighHillsideRNOpeningPage() {
       icon: "🎉",
     },
     {
-      title: "Game Area",
+      title: "Game Corner",
       description:
-        "A cosy corner for light recreation, interactive activities, and small-group engagement for all ages.",
-      features: ["Family-friendly", "Interactive play", "Casual social space"],
+        "A cosy room for light recreation, interactive activities, and small-group engagement for residents of different ages.",
+      features: ["Family-friendly", "Interactive activities", "Cosy shared room"],
       icon: "🎲",
     },
     {
@@ -35,6 +36,13 @@ export default function WoodleighHillsideRNOpeningPage() {
         "A simple support area to facilitate light refreshments during selected programmes and community sessions.",
       features: ["Refreshment support", "Programme convenience", "Functional amenity"],
       icon: "☕",
+    },
+    {
+      title: "Office",
+      description:
+        "A back-of-house workspace to support coordination, administration, and the smooth running of RN activities.",
+      features: ["Operational support", "Admin space", "Programme coordination"],
+      icon: "🗂️",
     },
     {
       title: "Display & Community Wall",
@@ -183,8 +191,19 @@ export default function WoodleighHillsideRNOpeningPage() {
             <h2 className="mt-2 text-3xl font-semibold text-stone-900">Spaces around the centre</h2>
           </div>
           <p className="max-w-2xl text-sm leading-6 text-stone-600">
-            Based on the reference layout, the centre includes a mix of flexible activity, learning, recreation, and support areas that can serve different resident needs.
+            Based on the reference layout below, the centre includes a mix of flexible activity, learning, recreation, and support areas that can serve different resident needs.
           </p>
+          <p className="max-w-2xl text-sm leading-6 text-stone-500">
+            For deployment, save the labelled floor plan image as <span className="font-medium text-stone-700">woodleigh-hillside-rn-floorplan.png</span> inside your project’s <span className="font-medium text-stone-700">public</span> folder.
+          </p>
+        </div>
+
+        <div className="mb-8 overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm">
+          <img
+            src={floorplanImage}
+            alt="Labelled floor plan of the Woodleigh Hillside Residents' Network Centre showing the Main Activity Area, Community Wall, Game Corner, Display Area, Sitting Bench Area, Pantry Corner, Office, and Classroom."
+            className="h-auto w-full"
+          />
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
