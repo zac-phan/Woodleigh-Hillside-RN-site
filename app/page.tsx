@@ -1,6 +1,5 @@
 export default function WoodleighHillsideRNOpeningPage() {
-  const googleFormUrl = "https://forms.gle/6dNgvKJjEz5d9mXS9";
-  const floorplanImage = "/woodleigh-hillside-rn-floorplan.png";
+  const googleFormUrl = "https://forms.gle/REPLACE_WITH_YOUR_FORM_LINK";
   const spaces = [
     {
       title: "Main Activity Area",
@@ -10,10 +9,10 @@ export default function WoodleighHillsideRNOpeningPage() {
       icon: "🎉",
     },
     {
-      title: "Game Corner",
+      title: "Game Area",
       description:
-        "A cosy room for light recreation, interactive activities, and small-group engagement for residents of different ages.",
-      features: ["Family-friendly", "Interactive activities", "Cosy shared room"],
+        "A cosy corner for light recreation, interactive activities, and small-group engagement for all ages.",
+      features: ["Family-friendly", "Interactive play", "Casual social space"],
       icon: "🎲",
     },
     {
@@ -36,13 +35,6 @@ export default function WoodleighHillsideRNOpeningPage() {
         "A simple support area to facilitate light refreshments during selected programmes and community sessions.",
       features: ["Refreshment support", "Programme convenience", "Functional amenity"],
       icon: "☕",
-    },
-    {
-      title: "Office",
-      description:
-        "A back-of-house workspace to support coordination, administration, and the smooth running of RN activities.",
-      features: ["Operational support", "Admin space", "Programme coordination"],
-      icon: "🗂️",
     },
     {
       title: "Display & Community Wall",
@@ -191,19 +183,8 @@ export default function WoodleighHillsideRNOpeningPage() {
             <h2 className="mt-2 text-3xl font-semibold text-stone-900">Spaces around the centre</h2>
           </div>
           <p className="max-w-2xl text-sm leading-6 text-stone-600">
-            Based on the reference layout below, the centre includes a mix of flexible activity, learning, recreation, and support areas that can serve different resident needs.
+            Based on the reference layout, the centre includes a mix of flexible activity, learning, recreation, and support areas that can serve different resident needs.
           </p>
-          <p className="max-w-2xl text-sm leading-6 text-stone-500">
-            For deployment, save the labelled floor plan image as <span className="font-medium text-stone-700">woodleigh-hillside-rn-floorplan.png</span> inside your project’s <span className="font-medium text-stone-700">public</span> folder.
-          </p>
-        </div>
-
-        <div className="mb-8 overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm">
-          <img
-            src={floorplanImage}
-            alt="Labelled floor plan of the Woodleigh Hillside Residents' Network Centre showing the Main Activity Area, Community Wall, Game Corner, Display Area, Sitting Bench Area, Pantry Corner, Office, and Classroom."
-            className="h-auto w-full"
-          />
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -259,31 +240,53 @@ export default function WoodleighHillsideRNOpeningPage() {
           </div>
 
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="flex h-full flex-col justify-between">
+            <div className="grid gap-5">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">Share your ideas</p>
-                <h3 className="mt-2 text-2xl font-semibold text-stone-900">Submit your suggestions through our Google Form</h3>
-                <p className="mt-4 text-base leading-7 text-stone-600">
-                  To keep feedback collection simple and organised, resident ideas for activities and programmes will be gathered directly through our Google Form.
-                </p>
-                <p className="mt-4 text-base leading-7 text-stone-600">
-                  Whether you have ideas for family activities, wellness sessions, workshops, hobby groups, or community bonding events, we would love to hear from you.
-                </p>
+                <label className="mb-2 block text-sm font-medium text-stone-700">Your name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-stone-500"
+                />
               </div>
-
-              <div className="mt-8 rounded-3xl border border-stone-200 bg-stone-50 p-6">
-                <p className="text-sm leading-6 text-stone-600">
-                  Click the button below to open the form and submit your suggestions.
-                </p>
-                <a
-                  href={googleFormUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex rounded-2xl bg-stone-900 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5"
-                >
-                  Open Google Form
-                </a>
+              <div>
+                <label className="mb-2 block text-sm font-medium text-stone-700">Type of activity</label>
+                <select className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 outline-none transition focus:border-stone-500">
+                  <option>Family and children</option>
+                  <option>Health and wellness</option>
+                  <option>Learning and enrichment</option>
+                  <option>Arts and hobbies</option>
+                  <option>Senior engagement</option>
+                  <option>Community bonding</option>
+                </select>
               </div>
+              <div>
+                <label className="mb-2 block text-sm font-medium text-stone-700">Your idea</label>
+                <textarea
+                  rows={5}
+                  placeholder="Share the kind of activities or programmes you would love to see in the RN Centre"
+                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-stone-500"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-sm font-medium text-stone-700">Who is it for?</label>
+                <input
+                  type="text"
+                  placeholder="Example: seniors, families, children, youths, all residents"
+                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-stone-500"
+                />
+              </div>
+              <a
+                href={googleFormUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-fit rounded-2xl bg-stone-900 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5"
+              >
+                Submit Interest
+              </a>
+              <p className="text-xs leading-5 text-stone-500">
+                Replace the placeholder Google Form link in the code with your actual form URL to start collecting resident suggestions.
+              </p>
             </div>
           </div>
         </div>
