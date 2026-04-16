@@ -1,5 +1,5 @@
 export default function WoodleighHillsideRNOpeningPage() {
-  const googleFormUrl = "https://forms.gle/REPLACE_WITH_YOUR_FORM_LINK";
+  const googleFormUrl = "https://forms.gle/6dNgvKJjEz5d9mXS9";
   const spaces = [
     {
       title: "Main Activity Area",
@@ -240,53 +240,31 @@ export default function WoodleighHillsideRNOpeningPage() {
           </div>
 
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="grid gap-5">
+            <div className="flex h-full flex-col justify-between">
               <div>
-                <label className="mb-2 block text-sm font-medium text-stone-700">Your name</label>
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-stone-500"
-                />
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-stone-500">Share your ideas</p>
+                <h3 className="mt-2 text-2xl font-semibold text-stone-900">Submit your suggestions through our Google Form</h3>
+                <p className="mt-4 text-base leading-7 text-stone-600">
+                  To keep feedback collection simple and organised, resident ideas for activities and programmes will be gathered directly through our Google Form.
+                </p>
+                <p className="mt-4 text-base leading-7 text-stone-600">
+                  Whether you have ideas for family activities, wellness sessions, workshops, hobby groups, or community bonding events, we would love to hear from you.
+                </p>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium text-stone-700">Type of activity</label>
-                <select className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 outline-none transition focus:border-stone-500">
-                  <option>Family and children</option>
-                  <option>Health and wellness</option>
-                  <option>Learning and enrichment</option>
-                  <option>Arts and hobbies</option>
-                  <option>Senior engagement</option>
-                  <option>Community bonding</option>
-                </select>
+
+              <div className="mt-8 rounded-3xl border border-stone-200 bg-stone-50 p-6">
+                <p className="text-sm leading-6 text-stone-600">
+                  Click the button below to open the form and submit your suggestions.
+                </p>
+                <a
+                  href={googleFormUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex rounded-2xl bg-stone-900 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5"
+                >
+                  Open Google Form
+                </a>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium text-stone-700">Your idea</label>
-                <textarea
-                  rows={5}
-                  placeholder="Share the kind of activities or programmes you would love to see in the RN Centre"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-stone-500"
-                />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium text-stone-700">Who is it for?</label>
-                <input
-                  type="text"
-                  placeholder="Example: seniors, families, children, youths, all residents"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-stone-500"
-                />
-              </div>
-              <a
-                href={googleFormUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-fit rounded-2xl bg-stone-900 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5"
-              >
-                Submit Interest
-              </a>
-              <p className="text-xs leading-5 text-stone-500">
-                Replace the placeholder Google Form link in the code with your actual form URL to start collecting resident suggestions.
-              </p>
             </div>
           </div>
         </div>
